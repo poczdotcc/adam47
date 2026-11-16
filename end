@@ -1,0 +1,635 @@
+<!-- Load Typewriter & Distinct Handwriting Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Gloria+Hallelujah&family=Homemade+Apple&family=Indie+Flower&family=Kalam&family=Nothing+You+Could+Do&family=Patrick+Hand&family=Permanent+Marker&family=Reenie+Beanie&family=Shadows+Into+Light&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+  /* Scoped strictly to this Squarespace Code Block */
+  #adam47-endorsements-wrapper {
+    --paper-bg: #f7f4eb;
+    --card-bg: #fffdf9;
+    --ink-black: #141414;
+    --ink-muted: #4a4843;
+    --stamp-red: #9e2a2b;
+    --brass-trim: #8c6d3f;
+
+    background-color: var(--paper-bg);
+    color: var(--ink-black);
+    font-family: 'Courier Prime', 'Courier', monospace;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 52px 28px;
+    border: 2px solid var(--ink-black);
+    box-shadow: 8px 8px 0px var(--ink-black);
+    box-sizing: border-box;
+    line-height: 1.55;
+  }
+
+  #adam47-endorsements-wrapper * {
+    box-sizing: border-box;
+  }
+
+  /* Section 1: Big Header */
+  #adam47-endorsements-wrapper .hero-header {
+    text-align: center;
+    border-bottom: 3px double var(--ink-black);
+    padding-bottom: 26px;
+    margin-bottom: 48px;
+  }
+
+  #adam47-endorsements-wrapper .doc-meta {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0 0 10px 0;
+  }
+
+  #adam47-endorsements-wrapper h1.main-title {
+    font-family: 'Special Elite', 'Courier Prime', monospace;
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+    line-height: 1.12;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.01em;
+    color: var(--ink-black);
+    text-transform: uppercase;
+  }
+
+  #adam47-endorsements-wrapper .subtitle {
+    font-size: 15px;
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--ink-black);
+    line-height: 1.6;
+  }
+
+  /* Dense Polaroid Wall Grid */
+  #adam47-endorsements-wrapper .polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+    gap: 38px 22px;
+    margin-bottom: 68px;
+    padding: 14px 8px;
+  }
+
+  #adam47-endorsements-wrapper .polaroid-card {
+    background: #ffffff;
+    border: 1.5px solid var(--ink-black);
+    padding: 12px 12px 18px 12px;
+    box-shadow: 3px 5px 0px rgba(20, 20, 20, 0.85);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  /* Organic, varied hand-placed tilts */
+  #adam47-endorsements-wrapper .polaroid-card:nth-child(4n+1) { transform: rotate(-1.8deg); }
+  #adam47-endorsements-wrapper .polaroid-card:nth-child(4n+2) { transform: rotate(1.5deg); }
+  #adam47-endorsements-wrapper .polaroid-card:nth-child(4n+3) { transform: rotate(-0.8deg); }
+  #adam47-endorsements-wrapper .polaroid-card:nth-child(4n)   { transform: rotate(2.1deg); }
+
+  #adam47-endorsements-wrapper .polaroid-card:hover {
+    transform: rotate(0deg) scale(1.03) translateY(-4px);
+    box-shadow: 7px 9px 0px var(--ink-black);
+    z-index: 5;
+  }
+
+  /* Realistic Translucent Masking Tape Strip */
+  #adam47-endorsements-wrapper .tape-strip {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    width: 82px;
+    height: 24px;
+    background: linear-gradient(
+      180deg,
+      rgba(235, 224, 188, 0.86) 0%,
+      rgba(222, 209, 168, 0.78) 50%,
+      rgba(232, 221, 184, 0.85) 100%
+    );
+    border-top: 1px solid rgba(160, 148, 112, 0.35);
+    border-bottom: 1px solid rgba(160, 148, 112, 0.35);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+    pointer-events: none;
+    z-index: 3;
+    clip-path: polygon(
+      3% 0%, 97% 2%, 100% 18%, 96% 35%, 100% 52%, 97% 70%, 100% 88%, 96% 100%,
+      4% 98%, 0% 82%, 4% 64%, 0% 46%, 3% 28%, 0% 12%
+    );
+  }
+
+  #adam47-endorsements-wrapper .polaroid-card:nth-child(3n+1) .tape-strip {
+    transform: translateX(-52%) rotate(-4deg);
+    width: 86px;
+  }
+  #adam47-endorsements-wrapper .polaroid-card:nth-child(3n+2) .tape-strip {
+    transform: translateX(-46%) rotate(3.5deg);
+    width: 76px;
+  }
+  #adam47-endorsements-wrapper .polaroid-card:nth-child(3n) .tape-strip {
+    transform: translateX(-50%) rotate(-1.5deg);
+    width: 90px;
+  }
+
+  #adam47-endorsements-wrapper .polaroid-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 1px solid var(--ink-black);
+    display: block;
+    filter: contrast(1.04);
+  }
+
+  /* 12 Distinct Handwriting Styles for Friend Names */
+  #adam47-endorsements-wrapper .handwriting {
+    margin-top: 12px;
+    text-align: center;
+    color: #181818;
+    line-height: 1.15;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+  }
+
+  #adam47-endorsements-wrapper .hw-1  { font-family: 'Caveat', cursive; font-size: 25px; }
+  #adam47-endorsements-wrapper .hw-2  { font-family: 'Shadows Into Light', cursive; font-size: 20px; letter-spacing: 0.03em; }
+  #adam47-endorsements-wrapper .hw-3  { font-family: 'Permanent Marker', cursive; font-size: 17px; }
+  #adam47-endorsements-wrapper .hw-4  { font-family: 'Patrick Hand', cursive; font-size: 22px; }
+  #adam47-endorsements-wrapper .hw-5  { font-family: 'Reenie Beanie', cursive; font-size: 29px; }
+  #adam47-endorsements-wrapper .hw-6  { font-family: 'Indie Flower', cursive; font-size: 20px; font-weight: bold; }
+  #adam47-endorsements-wrapper .hw-7  { font-family: 'Architects Daughter', cursive; font-size: 18px; }
+  #adam47-endorsements-wrapper .hw-8  { font-family: 'Kalam', cursive; font-size: 20px; }
+  #adam47-endorsements-wrapper .hw-9  { font-family: 'Nothing You Could Do', cursive; font-size: 19px; font-weight: bold; }
+  #adam47-endorsements-wrapper .hw-10 { font-family: 'Gloria Hallelujah', cursive; font-size: 16px; }
+  #adam47-endorsements-wrapper .hw-11 { font-family: 'Homemade Apple', cursive; font-size: 15px; }
+  #adam47-endorsements-wrapper .hw-12 { font-family: 'Special Elite', monospace; font-size: 17px; }
+
+  /* =========================================================
+     SECTION 2: FORMAL FRAMED ENDORSEMENTS SECTION
+     ========================================================= */
+  #adam47-endorsements-wrapper .endorsements-section {
+    border-top: 3px double var(--ink-black);
+    padding-top: 40px;
+    margin-bottom: 48px;
+  }
+
+  #adam47-endorsements-wrapper h2.section-heading {
+    font-family: 'Special Elite', 'Courier Prime', monospace;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 8px 0;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-intro {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin: 0 0 28px 0;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 28px;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-item {
+    background: var(--card-bg);
+    border: 1.5px solid var(--ink-black);
+    padding: 24px;
+    box-shadow: 4px 4px 0px var(--ink-black);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-item.open-slot {
+    border-style: dashed;
+    background: #fcf9f0;
+  }
+
+  /* Formal Museum / Office Picture Frame */
+  #adam47-endorsements-wrapper .formal-portrait-unit {
+    flex: 0 0 148px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #adam47-endorsements-wrapper .formal-frame {
+    width: 148px;
+    background-color: #1f1c18;
+    border: 5px solid var(--ink-black);
+    outline: 2px solid var(--brass-trim);
+    outline-offset: -4px;
+    padding: 12px;
+    box-shadow:
+      0 6px 14px rgba(0, 0, 0, 0.28),
+      inset 0 0 6px rgba(0, 0, 0, 0.65);
+  }
+
+  /* Archival Off-White Mat Board */
+  #adam47-endorsements-wrapper .formal-mat {
+    background-color: #f4efe2;
+    padding: 10px;
+    border: 1px solid #bfb69f;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Inner Fillet & Portrait Photo Slot */
+  #adam47-endorsements-wrapper .formal-photo-slot {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: #dfd8c8;
+    border: 1.5px solid var(--brass-trim);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.14);
+    text-decoration: none;
+  }
+
+  #adam47-endorsements-wrapper .formal-photo-slot .monogram {
+    font-family: 'Special Elite', monospace;
+    font-size: 16px;
+    color: var(--ink-black);
+    margin-bottom: 4px;
+    letter-spacing: 0.08em;
+  }
+
+  #adam47-endorsements-wrapper .formal-mat img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 1.5px solid var(--brass-trim);
+    display: block;
+    filter: contrast(1.05);
+  }
+
+  /* Engraved Brass-Style Plaque Under Frame */
+  #adam47-endorsements-wrapper .brass-plaque {
+    margin-top: 10px;
+    background: linear-gradient(180deg, #d8c28a 0%, #bfa363 100%);
+    border: 1px solid var(--ink-black);
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #141414;
+    text-align: center;
+    box-shadow: 1px 2px 0px var(--ink-black);
+  }
+
+  #adam47-endorsements-wrapper .endorsement-body {
+    flex: 1;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-quote {
+    font-size: 14px;
+    font-style: italic;
+    margin: 0 0 14px 0;
+    line-height: 1.6;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-author {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-author a {
+    color: var(--ink-black);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  #adam47-endorsements-wrapper .endorsement-author a:hover {
+    color: var(--stamp-red);
+    background-color: rgba(158, 42, 43, 0.08);
+  }
+
+  #adam47-endorsements-wrapper .endorsement-role {
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin: 4px 0 0 0;
+  }
+
+  #adam47-endorsements-wrapper .endorse-cta-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    background-color: var(--ink-black);
+    color: #fffdf9;
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid var(--ink-black);
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  #adam47-endorsements-wrapper .endorse-cta-btn:hover {
+    background-color: var(--stamp-red);
+    border-color: var(--stamp-red);
+    color: #ffffff;
+  }
+
+  /* Bottom Statutory Disclaimer Box */
+  #adam47-endorsements-wrapper .disclaimer-box {
+    border: 1.5px dashed var(--ink-black);
+    background-color: #efeadd;
+    padding: 22px 24px;
+    font-size: 13px;
+    line-height: 1.65;
+    position: relative;
+  }
+
+  #adam47-endorsements-wrapper .disclaimer-label {
+    display: inline-block;
+    font-family: 'Special Elite', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--stamp-red);
+    border: 1.5px solid var(--stamp-red);
+    padding: 2px 8px;
+    margin-bottom: 12px;
+    transform: rotate(-1deg);
+  }
+
+  #adam47-endorsements-wrapper .disclaimer-box p {
+    margin: 0 0 10px 0;
+    color: var(--ink-black);
+  }
+
+  #adam47-endorsements-wrapper .disclaimer-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  #adam47-endorsements-wrapper .disclaimer-box a {
+    color: var(--ink-black);
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  @media (max-width: 650px) {
+    #adam47-endorsements-wrapper {
+      padding: 32px 16px;
+      box-shadow: 5px 5px 0px var(--ink-black);
+    }
+    #adam47-endorsements-wrapper .polaroid-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 14px;
+    }
+    #adam47-endorsements-wrapper .endorsement-list {
+      grid-template-columns: 1fr;
+    }
+    #adam47-endorsements-wrapper .endorsement-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+
+<div id="adam47-endorsements-wrapper">
+  <!-- SECTION 1: BIG HEADER + 22 TAPED POLAROIDS -->
+  <header class="hero-header">
+    <p class="doc-meta">EXHIBIT A // COMMUNITY &amp; NEIGHBORHOOD ARCHIVE</p>
+    <h1 class="main-title">Friends of Adam Cornelius</h1>
+    <p class="subtitle">
+      Neighbors, classmates, fellow organizers, porch-sitters, and people who have actually picked up the phone—<strong>but only two lawyers. Most of the lawyers can keep walking. Our test is much harder than yours and you seem to often forget that.</strong>
+    </p>
+  </header>
+
+  <section class="polaroid-grid" aria-label="Friends Photo Wall">
+    <!-- Polaroid 01 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/Vandervest.png" alt="Vandervest">
+      <div class="handwriting hw-1">Vandervest</div>
+    </div>
+
+    <!-- Polaroid 02 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/hilario.png" alt="Hilario">
+      <div class="handwriting hw-2">Hilario</div>
+    </div>
+
+    <!-- Polaroid 03 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/Norma.png" alt="Norma">
+      <div class="handwriting hw-3">Norma</div>
+    </div>
+
+    <!-- Polaroid 04 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/Leigh.png" alt="Leigh">
+      <div class="handwriting hw-4">Leigh</div>
+    </div>
+
+    <!-- Polaroid 05 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/mike.png" alt="Mike">
+      <div class="handwriting hw-5">Mike</div>
+    </div>
+
+    <!-- Polaroid 06 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/donovan.png" alt="Donovan">
+      <div class="handwriting hw-6">Donovan</div>
+    </div>
+
+    <!-- Polaroid 07 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/rabb.png" alt="Rabb">
+      <div class="handwriting hw-7">Rabb</div>
+    </div>
+
+    <!-- Polaroid 08 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/rashida.png" alt="Rashida">
+      <div class="handwriting hw-8">Rashida</div>
+    </div>
+
+    <!-- Polaroid 09 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/abdul.png" alt="Abdul">
+      <div class="handwriting hw-9">Abdul</div>
+    </div>
+
+    <!-- Polaroid 10 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/gilmer.png" alt="Gilmer">
+      <div class="handwriting hw-10">Gilmer</div>
+    </div>
+
+    <!-- Polaroid 11 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/mejia.png" alt="Mejia">
+      <div class="handwriting hw-11">Mejia</div>
+    </div>
+
+    <!-- Polaroid 12 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/kevin.png" alt="Kevin">
+      <div class="handwriting hw-12">Kevin</div>
+    </div>
+
+    <!-- Polaroid 13 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/typewriter.png" alt="Chicago Typewriter">
+      <div class="handwriting hw-3">Chicago Typewriter</div>
+    </div>
+
+    <!-- Polaroid 14 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/authur.png" alt="Arthur">
+      <div class="handwriting hw-5">Arthur</div>
+    </div>
+
+    <!-- Polaroid 15 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/newspaper1.png" alt="The Press">
+      <div class="handwriting hw-1">The Press</div>
+    </div>
+
+    <!-- Polaroid 16 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/kiss.png" alt="Kiss">
+      <div class="handwriting hw-8">Kiss</div>
+    </div>
+
+    <!-- Polaroid 17 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/hollykim.png" alt="Holly Kim">
+      <div class="handwriting hw-2">Holly Kim</div>
+    </div>
+
+    <!-- Polaroid 18 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/potawatomi.png" alt="Potawatomi">
+      <div class="handwriting hw-10">Potawatomi</div>
+    </div>
+
+    <!-- Polaroid 19 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/francis.png" alt="Francis">
+      <div class="handwriting hw-4">Francis</div>
+    </div>
+
+    <!-- Polaroid 20 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/myronDpeterson.png" alt="Myron D. Peterson">
+      <div class="handwriting hw-7">Myron D. Peterson</div>
+    </div>
+
+    <!-- Polaroid 21 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/hurst_wealth.png" alt="Hurst Wealth">
+      <div class="handwriting hw-6">Hurst Wealth</div>
+    </div>
+
+    <!-- Polaroid 22 -->
+    <div class="polaroid-card">
+      <div class="tape-strip"></div>
+      <img src="/s/napawinetrain.png" alt="Napa Wine Train">
+      <div class="handwriting hw-9">Napa Wine Train</div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: FORMAL FRAMED ENDORSEMENTS SECTION -->
+  <section class="endorsements-section" aria-label="Endorsements">
+    <h2 class="section-heading">Endorsements</h2>
+    <p class="endorsement-intro">One on-the-record endorsement that actually mattered—and an open seat right next to him.</p>
+
+    <div class="endorsement-list">
+      <!-- Formal Framed Endorsement 1: Dr. William W. Lin -->
+      <div class="endorsement-item">
+        <div class="formal-portrait-unit">
+          <div class="formal-frame">
+            <div class="formal-mat">
+              <img src="/s/williamlin.png" alt="William W. Lin, MD FACS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="formal-photo-slot" style="display: none;">
+                <span class="monogram">W.W.L.</span>
+                <span>MD, FACS</span>
+              </div>
+            </div>
+          </div>
+          <div class="brass-plaque">Endorser No. 01</div>
+        </div>
+        <div class="endorsement-body">
+          <p class="endorsement-quote">“When Adam was diagnosed with testicular cancer in 2021, he showed up clear-eyed, asked the right questions, and got through treatment with grit and humor. Five years later, I’m proud to see him still showing up for his neighbors.”</p>
+          <p class="endorsement-author">— <a href="https://uropartners.com/physicians/William%20W%20%20Lin" target="_blank" rel="noopener">William W. Lin, MD FACS</a></p>
+          <p class="endorsement-role">Urologist &amp; Surgeon // Adam’s 2021 Testicular Cancer Doctor</p>
+        </div>
+      </div>
+
+      <!-- Formal Framed Endorsement 2: Open Invitation Slot -->
+      <div class="endorsement-item open-slot">
+        <div class="formal-portrait-unit">
+          <div class="formal-frame">
+            <div class="formal-mat">
+              <a class="formal-photo-slot" href="mailto:therealadamcornelius@gmail.com?subject=Yes%2C%20I%20will%20endorse%20you%20%E2%80%94%20Move%20my%20picture%20down!&body=Yes%2C%20I%20will%20endorse%20you%E2%80%94move%20my%20picture%20down%20below%20the%20friends.%20Let%27s%20do%20this%2C%20and%20let%27s%20do%20something%20together!%0A%0AMy%20Name%3A%20%0AMy%20Neighborhood%20%2F%20Role%3A%20%0AOptional%20Note%3A%20">
+                <span class="monogram">+</span>
+                <span>Your Photo<br>Moves Here</span>
+              </a>
+            </div>
+          </div>
+          <div class="brass-plaque">Endorser No. 02</div>
+        </div>
+        <div class="endorsement-body">
+          <p class="endorsement-quote">“Yes, I will endorse you—move my picture down below the friends. Let’s do this, and let’s do something together.”</p>
+          <p class="endorsement-author">— <a href="mailto:therealadamcornelius@gmail.com?subject=Yes%2C%20I%20will%20endorse%20you%20%E2%80%94%20Move%20my%20picture%20down!&body=Yes%2C%20I%20will%20endorse%20you%E2%80%94move%20my%20picture%20down%20below%20the%20friends.%20Let%27s%20do%20this%2C%20and%20let%27s%20do%20something%20together!%0A%0AMy%20Name%3A%20%0AMy%20Neighborhood%20%2F%20Role%3A%20%0AOptional%20Note%3A%20">Your Name Here</a></p>
+          <p class="endorsement-role">Click your name to send a one-line email &amp; claim this frame</p>
+          <a class="endorse-cta-btn" href="mailto:therealadamcornelius@gmail.com?subject=Yes%2C%20I%20will%20endorse%20you%20%E2%80%94%20Move%20my%20picture%20down!&body=Yes%2C%20I%20will%20endorse%20you%E2%80%94move%20my%20picture%20down%20below%20the%20friends.%20Let%27s%20do%20this%2C%20and%20let%27s%20do%20something%20together!%0A%0AMy%20Name%3A%20%0AMy%20Neighborhood%20%2F%20Role%3A%20%0AOptional%20Note%3A%20">Send “Yes, I Will Endorse You” &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUTORY & HUMAN DISCLAIMER -->
+  <footer class="disclaimer-box">
+    <span class="disclaimer-label">Statutory Notice &amp; Clarification // 10 ILCS 5/</span>
+    <p>
+      <strong>1. What Counts as a “Friend” Under Illinois Statute:</strong> Nowhere in the <a href="https://www.ilga.gov/legislation/ILCS/details?ActID=170&ActName=Election+Code.&ChapAct=10+ILCS+5%2F" target="_blank" rel="noopener">Illinois Election Code (10 ILCS 5/)</a>—including Article 9 (Campaign Contributions and Expenditures, 10 ILCS 5/9-1 et seq.)—does the General Assembly define “friend.” Friendship is governed by human decency, not Springfield. Being a friend of Adam Cornelius does not necessarily mean an endorsement. Sometimes friends fight—and sometimes those fights get loud—but they always make up. Because that’s what friends, and humans for that matter, do, no matter how big the fights get.
+    </p>
+    <p>
+      <strong>2. What Counts as an “Endorsement” Under Illinois Statute:</strong> The Illinois Election Code likewise draws no legal category called a “personal endorsement,” instead regulating only reportable <em>contributions</em> (<a href="https://www.ilga.gov/documents/legislation/ilcs/documents/001000050K9-1.4.htm" target="_blank" rel="noopener">10 ILCS 5/9-1.4</a>) and paid <em>electioneering communications</em> (<a href="https://www.ilga.gov/documents/legislation/ilcs/documents/001000050K9-1.14.htm" target="_blank" rel="noopener">10 ILCS 5/9-1.14</a>). Under <strong>10 ILCS 5/9-1.4(A)(4)</strong>, uncompensated personal services volunteered by an individual—including putting your name on a wall or saying something nice—are expressly excluded from the definition of a campaign contribution, and unless a statement is made in concert with a committee or distributed as a paid broadcast/targeted electioneering communication within 30 days of a primary or 60 days of a general election (<strong>10 ILCS 5/9-1.14</strong>; see also unauthorized communications under <strong>10 ILCS 5/9-8</strong>), it is simply protected personal speech.
+    </p>
+  </footer>
+</div>
